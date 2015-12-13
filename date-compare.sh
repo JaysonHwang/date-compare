@@ -45,13 +45,10 @@ do
 done
 ET=$(date +%s) #program end time
 #输出统计结果
-echo "<<<<<<<< $DATELIMIT">&3
-echo "lt:$LTtotal  total:$TOTAL  time:$((ET-ST))s">&3
-echo ">>>>>>>> $DATELIMIT">&4
-echo "gt:$GTtotal  total:$TOTAL  time:$((ET-ST))s">&4
-echo "======== $DATELIMIT">&5
-echo "eq:$EQtotal  total:$TOTAL  time:$((ET-ST))s">&5
-echo "results stored in 3 files: result_[lt|eq|gt]_[YYYYMMDD|YYYY-MM-DD].txt"
+echo "<<<<<<<< $DATELIMIT  lt:$LTtotal  total:$TOTAL  time:$((ET-ST))s">&3
+echo ">>>>>>>> $DATELIMIT  gt:$GTtotal  total:$TOTAL  time:$((ET-ST))s">&4
+echo "======== $DATELIMIT  eq:$EQtotal  total:$TOTAL  time:$((ET-ST))s">&5
+echo "results stored in 3 files: result_[lt|eq|gt]_[YYYYMMDD|YYYY-MM-DD].txt">&1
 echo "lt:$LTtotal  eq:$EQtotal  gt:$GTtotal  total:$TOTAL  time:$((ET-ST))s">&1
 exec 3>&-
 exec 3<&-
