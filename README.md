@@ -1,5 +1,5 @@
 # date-compare
-a shell script to list files to different texts judged by date line
+Shell脚本实现根据文件的访问时间来分类
 
 ## 用法
 ```
